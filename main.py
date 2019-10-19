@@ -3,8 +3,8 @@ from tkinter import filedialog
 import cv2
 
 class Contour:
-    def __init__(process):
-        self.fileName = process
+    def __init__(self, fileName=None):
+        self.fileName = fileName
 
     def detectContour(self):
         imgGray = cv2.cvtColor(self.fileName, cv2.COLOR_BGR2GRAY)
@@ -23,11 +23,13 @@ class Window:
         self.filename =  filedialog.askopenfilename(initialdir = "/", title = "Select file", filetypes = (("jpeg files", "*.jpg"), ("all files", "*.*")))
         print(self.filename)
         self.img = cv2.imread(self.filename)
-        cv2.imshow("รูปภาพ ", self.img)
-        _Contour = Contour(self.img)
-        _Contour.detectContour(self.img)
+        #cv2.imshow("รูปภาพ ", self.img)
         self.imgScaled = cv2.resize(self.img, (720, 500), interpolation = cv2.INTER_AREA)
-        cv2.imshow("New scale ", self.imgScaled)
+        cv2.imshow("ภาพก่อนประมวลผล", self.imgScaled)
+        _Contour = Contour(self.img)
+        _Contour.detectContour()
+        self.imgScaled01 = cv2.resize(self.img, (720, 500), interpolation = cv2.INTER_AREA)
+        cv2.imshow("ภาพหลังประมวลผล", self.imgScaled01)
         cv2.waitKey(0)
         cv2.destroyAllWindows()
 
