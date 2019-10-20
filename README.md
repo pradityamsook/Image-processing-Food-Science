@@ -1,6 +1,7 @@
 # Image-processing-Food-Science
 
-## Please run main.py, main.py is main launcher.
+## Please run main.py.
+$python main.py
 
 # IPM
 
