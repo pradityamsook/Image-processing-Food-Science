@@ -1,5 +1,7 @@
 # Image-processing-Food-Science
 
+## Please run main.py, main.py is main launcher.
+
 # IPM
 
 IPM is image processing meat program create for compute meat and fat.
