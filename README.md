@@ -1,7 +1,10 @@
 # Image-processing-Food-Science
 
 ## Please run main.py.
+```bash
 $python main.py
+```
+
 
 # IPM
 
