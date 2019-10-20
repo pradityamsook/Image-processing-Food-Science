@@ -14,12 +14,12 @@ IPM is image processing meat program create for compute meat and fat.
 
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
 
-## For python2.x
+### For python2.x
 ```bash
 pip install Tk
 pip install opencv-python
 ```
-## For python3.x
+### For python3.x
 ```bash
 pip install tk
 pip install opencv-python
