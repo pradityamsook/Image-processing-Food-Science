@@ -21,8 +21,8 @@ pip install opencv-python
 ```
 ### For python3.x
 ```bash
-pip install tk
-pip install opencv-python
+pip3 install tk
+pip3 install opencv-python
 ```
 
 ## Contributing
