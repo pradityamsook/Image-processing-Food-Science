@@ -33,7 +33,8 @@ pip3 install opencv-python
 pip3 install matplotlib
 ```
 ## Create virtual environment in you directory
- ```bash
+```bash
+$mkdir your_directory
 $cd your_directory
 ```
 ### For python2.x
