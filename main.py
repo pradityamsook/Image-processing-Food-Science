@@ -1,6 +1,15 @@
 from tkinter import *
 from tkinter import filedialog
+
+import matplotlib.pyplot as plt
 import cv2
+
+fileImage = cv2.imread('49994.jpg')
+for i, col in enumerate(['b', 'g', 'r']):
+    hist = cv2.calcHist([fileImage], [i], None, [256], [0, 256]
+    plt.plot(hist, color = col)
+    plt.xlim([0, 256])
+plt.show()
 
 class Contour:
     def __init__(self, fileName=None):
@@ -11,6 +20,14 @@ class Contour:
         ret, thresh = cv2.threshold(imgGray, 100, 255, 0)
         contour, hierachy = cv2.findContours(thresh, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
         cv2.drawContours(self.fileName, contour, -1, (0, 0, 255), 3)
+   
+    #def histroGram(self):
+        #import matplotlib.pyplot as plt
+        #for i, col in enumerate(['b', 'g', 'r']):
+           # hist = cv2.calHist([self.filename], [i], None, [256], [0, 256]
+            #plt.plot(hist, color = col)
+            #plt.xlim([0, 256])
+        #plt.show()
 
 class Window:
     def __init__(self, master):
@@ -32,6 +49,8 @@ class Window:
         cv2.imshow("ภาพหลังประมวลผล", self.imgScaled01)
         cv2.waitKey(0)
         cv2.destroyAllWindows()
+
+        _Contour.histroGram()
 
 root = Tk()
 root.geometry("400x400")
