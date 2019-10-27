@@ -10,7 +10,7 @@ $python main.py
 
 IPM is image processing meat program create for compute meat and fat.
 
-##virtual environment by python
+## virtual environment by python
 
 You can use virtual environment for run file.py, it's can install all modules in venv.
 
