@@ -1,14 +1,16 @@
 from tkinter import *
 from tkinter import filedialog
-
-import matplotlib.pyplot as plt
+from matplotlib import pyplot as plt
+import numpy as np
 import cv2
 
-fileImage = cv2.imread('49994.jpg')
-for i, col in enumerate(['b', 'g', 'r']):
-    hist = cv2.calcHist([fileImage], [i], None, [256], [0, 256]
-    plt.plot(hist, color = col)
-    plt.xlim([0, 256])
+#matplotlib inline
+fileImage = cv2.imread('/pics/49994.jpg')
+color = ('b', 'g', 'r')
+for i, col in enumerate(color):
+    histr = cv2.calcHist([fileImage], [i], None, [256], [0, 256]
+    plt.plot(histr, color = col)
+	plt.xlim([0,256])
 plt.show()
 
 class Contour:
@@ -37,7 +39,20 @@ class Window:
         openFileButton.place(x = 0, y = 0)
 
     def open_file_name(self):
-        self.filename =  filedialog.askopenfilename(initialdir = "/", title = "Select file", filetypes = (("jpeg files", "*.jpg"), ("all files", "*.*")))
+        self.filename = filedialog.askopenfilename(
+							initialdir = "/", 
+							title = "Select file", 
+							filetypes = (
+								(
+									"jpeg files", 
+									"*.jpg"
+								), 
+								(
+									"all files", 
+									"*.*"
+								)
+							)
+						)
         print(self.filename)
         self.img = cv2.imread(self.filename)
         #cv2.imshow("รูปภาพ ", self.img)
