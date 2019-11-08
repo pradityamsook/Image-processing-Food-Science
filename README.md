@@ -16,7 +16,7 @@ You can use virtual environment for run file.py, it's can install all modules in
 
 ## Installation
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install packages.
 
 ### For python2.x
 ```bash
