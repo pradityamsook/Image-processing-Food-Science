@@ -32,7 +32,7 @@ pip3 install tk
 pip3 install opencv-python
 pip3 install matplotlib
 ```
-## Create virtual environment in you directory
+## Create virtual environment in you directory(Support Linux)
 ```bash
 $mkdir your_directory
 $cd your_directory
